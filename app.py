@@ -43,7 +43,7 @@ import plotly.express as px
 
 # %%
 bos_rental = pd.read_csv(
-    "/Users/yihao/Documents/Bentley/Fall 2022/MA705 Data Sci/Projects/Indiviual Project/boston_rental/boston_rental.csv")
+    "https://github.com/theOnlyihao/Boston_Rental_Dashboard/blob/main/boston_rental.csv")
 bos_rental['Date'] = pd.to_datetime(bos_rental['Date'])
 bos_rental['Date'] = bos_rental.Date.dt.strftime("%Y-%m-%d")
 # bos_rental['Date'] = pd.to_datetime(bos_rental['Date'])
