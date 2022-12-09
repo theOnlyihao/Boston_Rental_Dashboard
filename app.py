@@ -1,4 +1,7 @@
-# %%
+"""
+author: yihao
+"""
+
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
@@ -11,7 +14,9 @@ from dash import dash_table
 from dash.dependencies import Input, Output
 import plotly.express as px
 
-# %%
+"""
+This part of the code is used to use api to get the raw data
+"""
 # url = "https://realty-mole-property-api.p.rapidapi.com/rentalListings"
 
 # querystring = {"city": "Boston", "state": "MA", "limit": "500"}
@@ -41,7 +46,6 @@ import plotly.express as px
 #     writer.writerow(csvheader)
 #     writer.writerows(data)
 
-# %%
 bos_rental = pd.read_csv(
     "https://github.com/theOnlyihao/Boston_Rental_Dashboard/blob/main/boston_rental.csv")
 bos_rental['Date'] = pd.to_datetime(bos_rental['Date'])
@@ -51,9 +55,7 @@ bos_rental['Zip_Code'] = bos_rental['Zip_Code'].apply(
     lambda x: '0' + str(x) if x < 10000 else str(x))
 bos_rental.sort_values("Days on Market (DOM)", inplace=True)
 
-# %%
 # get the plots
-
 chart1 = px.pie(bos_rental,
                 values=bos_rental.groupby('Zip_Code')[
                     'Property_Type'].count(),
@@ -67,8 +69,6 @@ chart1 = px.pie(bos_rental,
 
 chart1.update(layout=dict(title=dict(x=0.5)))
 
-
-# %%
 chart2 = px.bar(
     bos_rental,
     x=bos_rental.sort_values('Zip_Code')['Zip_Code'].unique(),
@@ -104,11 +104,16 @@ chart2.update_traces(texttemplate="%{text:.2s}")
 #         ])
 #     ])
 
+# stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = [
+    {
+        "href": "https://fonts.googleapis.com/css2?"
+                "family=Lato:wght@400;700&display=swap",
+        "rel": "stylesheet",
+    },
+]
 
-# %%
-stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
-app = dash.Dash(__name__, external_stylesheets=stylesheet)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div(
     children=[
@@ -117,16 +122,30 @@ app.layout = html.Div(
                 html.P(children="🏠", style={
                        'fontSize': "30px", 'textAlign': 'center'}, className="header-emoji"),
                 html.H1(
-                    children="Boston Real Estate Rental Info", style={'textAlign': 'center'}, className="header-title"
+                    children="Boston Real Estate Rental Info", style={
+                        'color': '#FFFFFF',
+                        'font-size': '48px',
+                        'font-weight': 'bold',
+                        'text-align': 'center',
+                        'margin': '0 auto'},
+                    className="header-title",
                 ),
                 html.P(
                     children="This Dashboard is used to display the average rental price in each area (by zipcode)"
                     " and the number of rental real estates in Boston, MA",
                     # className="header-description",
-                    style={'textAlign': 'center'}
+                    style={'textAlign': 'center', 'color': '#FFFFFF',
+                           'margin': '4px auto',
+                           'text-align': 'center',
+                           'max-width': '384px'}
                 ),
             ],
             className="header",
+            style={
+                'background-color': '#d58b30',
+                'height': '288px',
+                'padding': '16px 0 0 0',
+            }
         ),
 
         html.Div(
