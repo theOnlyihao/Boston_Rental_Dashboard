@@ -2,7 +2,6 @@
 author: yihao
 """
 
-# from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 # import requests
@@ -114,14 +113,13 @@ external_stylesheets = [
 ]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-server = app.server
 
 app.layout = html.Div(
     children=[
         html.Div(
             children=[
-#                 html.P(children="🏠", style={
-#                        'fontSize': "30px", 'textAlign': 'center'}, className="header-emoji"),
+                # html.P(children="🏠", style={
+                #        'fontSize': "30px", 'textAlign': 'center'}, className="header-emoji"),
                 html.H1(
                     children="Boston Real Estate Rental Info", style={
                         'color': '#FFFFFF',
