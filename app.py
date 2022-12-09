@@ -132,7 +132,7 @@ app.layout = html.Div(
                 ),
                 html.P(
                     children="This Dashboard is used to display the average rental price in each area (by zipcode)"
-                    " and the number of rental real estates in Boston, MA"
+                    " and the number of rental real estates in Boston, MA."
                     " All the data updated on 12/8/2022. It can be updated by using realty-mole-property-api from Rapid Api",
                     # className="header-description",
                     style={'textAlign': 'center', 'color': '#FFFFFF',
