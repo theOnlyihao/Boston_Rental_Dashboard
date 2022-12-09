@@ -2,11 +2,11 @@
 author: yihao
 """
 
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
-import requests
-import csv
+# import requests
+# import csv
 import dash
 from dash import dcc
 from dash import html
