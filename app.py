@@ -120,8 +120,8 @@ app.layout = html.Div(
     children=[
         html.Div(
             children=[
-                html.P(children="🏠", style={
-                       'fontSize': "30px", 'textAlign': 'center'}, className="header-emoji"),
+#                 html.P(children="🏠", style={
+#                        'fontSize': "30px", 'textAlign': 'center'}, className="header-emoji"),
                 html.H1(
                     children="Boston Real Estate Rental Info", style={
                         'color': '#FFFFFF',
