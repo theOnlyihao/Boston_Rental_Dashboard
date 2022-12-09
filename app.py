@@ -46,7 +46,7 @@ This part of the code is used to use api to get the raw data
 #     writer.writerows(data)
 
 bos_rental = pd.read_csv(
-    "https://github.com/theOnlyihao/Boston_Rental_Dashboard/blob/main/boston_rental.csv")
+    "https://raw.githubusercontent.com/theOnlyihao/Boston_Rental_Dashboard/main/boston_rental.csv")
 bos_rental['Date'] = pd.to_datetime(bos_rental['Date'])
 bos_rental['Date'] = bos_rental.Date.dt.strftime("%Y-%m-%d")
 # bos_rental['Date'] = pd.to_datetime(bos_rental['Date'])
