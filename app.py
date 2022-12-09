@@ -201,7 +201,11 @@ app.layout = html.Div(
                         'textAlign': 'left'
                     } for c in ['Date', 'Region']
                 ],
-
+                filter_action="native",
+                sort_action="native",
+                filter_options={
+                    "placeholder_text": "Filter Data..."},
+                column_selectable="single",
                 style_as_list_view=True,
                 id='table',
                 page_size=10,
