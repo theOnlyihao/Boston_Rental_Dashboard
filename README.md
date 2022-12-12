@@ -1,3 +1,17 @@
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+![Contributors](https://img.shields.io/github/contributors/theOnlyihao/Boston_Rental_Dashboard?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/theOnlyihao/Boston_Rental_Dashboard?style=for-the-badge)
+![Stargazers](https://img.shields.io/github/stars/theOnlyihao/Boston_Rental_Dashboard?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/theOnlyihao/Boston_Rental_Dashboard?style=for-the-badge)
+![MIT License](https://img.shields.io/github/license/theOnlyihao/Boston_Rental_Dashboard?style=for-the-badge)
+
 <p align="center">
 
   <h3 align="center">Boston Rental Real Estate Dashboard</h3>
