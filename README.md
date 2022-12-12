@@ -1,6 +1,6 @@
 <p align="center">
 
-  <h3 align="center">Boston Real Estate Rental Dashboard</h3>
+  <h3 align="center">Boston Rental Real Estate Dashboard</h3>
 
   <p align="center">
     A dashboard that can display the number of real estate rental listings, average price of each area, and real estate rental details. 
