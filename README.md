@@ -52,7 +52,7 @@ It displays all the details about rental real estate listing in the market. User
 
 ### Built With
 
-* [Ployly Dash](https://dash.plotly.com/)
+* [Plotly Dash](https://dash.plotly.com/)
 * [Python](https://www.python.org/)
 
 <!-- USAGE EXAMPLES -->
